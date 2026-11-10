@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mùa Thu Quê Hương - Bài Thơ</title>
+
+    <style>
+        /* Thiết lập chung */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #f8eee0, #e6d5b8);
+            color: #59412e;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Phần đầu trang */
+        header {
+            text-align: center;
+            padding: 35px 15px;
+            background: linear-gradient(120deg, #75513b, #bd8b54);
+            color: #fff8e9;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            text-shadow: 2px 3px 5px #493020;
+        }
+
+        header p {
+            font-size: 17px;
+            font-style: italic;
+        }
+
+        /* Hình ảnh minh họa */
+        .banner {
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.85);
+            transition: 0.6s;
+        }
+
+        .banner img:hover {
+            transform: scale(1.04);
+            filter: brightness(1);
+        }
+
+        /* Nội dung chính */
+        main {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .poem {
+            background: rgba(255, 250, 240, 0.95);
+            padding: 40px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(80, 50, 20, 0.18);
+            border: 2px solid #d6b88c;
+        }
+
+        .poem h2 {
+            color: #9a6037;
+            font-size: 29px;
+            margin-bottom: 12px;
+        }
+
+        .author {
+            color: #a47a54;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .stanza {
+            font-size: 19px;
+            line-height: 2;
+            margin: 22px 0;
+            color: #60452f;
+        }
+
+        .divider {
+            width: 90px;
+            height: 3px;
+            background: #c4945c;
+            margin: 25px auto;
+            border-radius: 5px;
+        }
+
+        /* Phần cảm nhận */
+        .feeling {
+            margin-top: 30px;
+            padding: 25px;
+            background: #eee0ca;
+            border-left: 5px solid #a87546;
+            border-radius: 10px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .feeling h3 {
+            color: #89572f;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Chân trang */
+        footer {
+          background: #75513b;
+            color: #fff4df;
+            text-align: center;
+            padding: 22px;
+            line-height: 1.8;
+        }
+
+        /* Hiệu ứng lá rơi */
+        .leaf {
+            position: fixed;
+            top: -30px;
+            z-index: 10;
+            pointer-events: none;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        /* Hiệu ứng xuất hiện */
+        .poem, .feeling {
+            animation: appear 1.5s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Điều chỉnh trên điện thoại */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            .banner img {
+                height: 240px;
+            }
+
+            .poem {
+                padding: 30px 12px;
+            }
+
+            .stanza {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍂 MÙA THU QUÊ HƯƠNG 🍂</h1>
+        <p>Vẻ đẹp dịu dàng của thiên nhiên và đất trời</p>
+    </header>
+
+    <div class="banner">
+        <img
+            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1400"
+            alt="Phong cảnh mùa thu với ánh nắng và hàng cây">
+    </div>
+
+    <main>
+
+        <section class="poem">
+            <h2>MÙA THU QUÊ HƯƠNG</h2>
+
+            <p class="author">
+                Tác giả: Bài thơ tự sáng tác
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="stanza">
+                Thu về nắng nhẹ bên thềm,<br>
+                Gió đưa hương lúa êm đềm đồng quê.<br>
+                Con đường nhỏ bóng hàng tre,<br>
+                Tiếng chim ríu rít gọi về bình yên.
+            </div>
+
+            <div class="stanza">
+                Mây trôi lặng lẽ trên miền,<br>
+                Dòng sông soi bóng dịu hiền trời thu.<br>
+                Lá vàng theo gió vi vu,<br>
+                Mang bao thương nhớ lời ru quê nhà.
+            </div>
+
+            <div class="stanza">
+                Chiều buông nắng trải hiên xa,<br>
+                Khói lam nghi ngút mái nhà thân thương.<br>
+                Dẫu đi muôn nẻo muôn phương,<br>
+                Quê hương vẫn mãi là đường ta yêu.
+            </div>
+
+            <div class="divider"></div>
+
+            <p style="font-style: italic; color: #a87546;">
+              "Quê hương là nơi bình yên nhất trong trái tim mỗi người."
+            </p>
+        </section>
+
+        <section class="feeling">
+            <h3>✿ CẢM NHẬN VỀ BÀI THƠ ✿</h3>
+
+            <p>
+                Bài thơ khắc họa vẻ đẹp dịu dàng, thơ mộng của mùa thu
+                nơi làng quê Việt Nam. Qua hình ảnh hàng tre, cánh đồng,
+                dòng sông và mái nhà thân thuộc, bài thơ thể hiện tình
+                yêu thiên nhiên cùng nỗi nhớ quê hương sâu sắc.
+                Những hình ảnh gần gũi kết hợp với ngôn từ nhẹ nhàng
+                tạo nên cảm giác bình yên và ấm áp.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🌿 Trang web giới thiệu tác phẩm thơ 🌿</p>
+        <p>Thiết kế bằng HTML và CSS - Tin học 12</p>
+        <p>Người thực hiện: Bích Nga</p>
+    </footer>
+
+    <script>
+        // Tạo hiệu ứng lá vàng rơi
+        function createLeaf() {
+            const leaf = document.createElement("div");
+
+            leaf.className = "leaf";
+            leaf.innerHTML = "🍂";
+
+            leaf.style.left = Math.random() * 100 + "vw";
+            leaf.style.fontSize = (15 + Math.random() * 20) + "px";
+            leaf.style.animationDuration = (5 + Math.random() * 7) + "s";
+
+            document.body.appendChild(leaf);
+
+            setTimeout(() => {
+                leaf.remove();
+            }, 12000);
+        }
+
+        setInterval(createLeaf, 500);
+    </script>
+
+</body>
+</html>
